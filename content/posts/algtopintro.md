@@ -19,7 +19,7 @@ cover:
     hidden: true # only hide on current single page
 
 math: true
-draft: false
+draft: true
 ---
 
 # What is Algebraic Topology? 

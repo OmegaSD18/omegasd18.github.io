@@ -6,15 +6,8 @@
     <description>Recent content on Soumya Dasgupta</description>
     <generator>Hugo -- 0.147.5</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 15 Sep 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 18 Mar 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>An Introduction to Algebraic Topology</title>
-      <link>http://localhost:1313/posts/algtopintro/</link>
-      <pubDate>Sun, 15 Sep 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/posts/algtopintro/</guid>
-      <description>Algebraic topology is the study of topological spaces using algebraic invariants, in this post I&amp;#39;ll discuss the fundamental invariants such as homotopy groups, homology groups and cohomology groups.</description>
-    </item>
     <item>
       <title></title>
       <link>http://localhost:1313/about/</link>
