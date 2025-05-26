@@ -1,0 +1,78 @@
+baseURL: https://example.org/
+languageCode: en-us
+title: Soumya Dasgupta
+theme: PaperMod
+
+pagination:
+  disableAliases: false
+  pagerSize: 5
+
+languages:
+  en:
+    languageName: "English"
+    weight: 1
+    taxonomies:
+      category: categories
+      tag: tags
+      series: series
+    menu:
+      main:
+        - name: Archive
+          url: archives
+          weight: 5
+        # - name: Search
+        #   url: search/
+        #   weight: 10
+        - name: Tags
+          url: tags/
+          weight: 10
+        - name: Blog
+          url: /posts/
+          weight: 10
+        - name: Gallery
+          url: /gallery/ 
+
+params:
+  profileMode:
+    enabled: true
+    title: "Soumya Dasgupta" # optional default will be site title
+    subtitle: "Graduate Mathematics Student"
+    imageUrl: "../assets/profile3.jpg" # optional
+    imageTitle: "Soumya Dasgupta" # optional
+    imageWidth: 200 # custom size
+    imageHeight: 200 # custom size
+    buttons:
+      - name: About
+        url: "/about"
+      - name: Blog
+        url: "/posts/"
+
+  socialIcons: # optional
+    - name: "Instagram"
+      url: "<link>"
+    - name: "Github"
+      url: "<link>"
+    - name: "LinkedIn"
+      url: "<link>"
+    - name: "X"
+      url: "<link>"
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
+    keys: ["title", "permalink", "summary", "content"]
+
+  ShowShareButtons: true
+  author: Soumya Dasgupta
+
+  outputs:
+    home:
+      - HTML
+      - RSS
+      - JSON # necessary for search
+  ShareButtons: ["linkedin", "twitter", "whatsapp"] # To customize which share buttons to be enabled on page
