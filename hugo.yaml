@@ -76,3 +76,7 @@ params:
       - RSS
       - JSON # necessary for search
   ShareButtons: ["linkedin", "twitter", "whatsapp"] # To customize which share buttons to be enabled on page
+
+  caches:
+    images:
+      dir: :cacheDir/images
