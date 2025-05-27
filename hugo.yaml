@@ -46,6 +46,7 @@ params:
         url: "/about"
       - name: Blog
         url: "/posts/"
+    math: true
 
   socialIcons: # optional
     - name: "Instagram"
@@ -80,3 +81,18 @@ params:
   caches:
     images:
       dir: :cacheDir/images
+
+  markup:
+    goldmark:
+      extensions:
+        passthrough:
+          delimiters:
+            block:
+            - - \[
+              - \]
+            - - $$
+              - $$
+            inline:
+            - - \(
+              - \)
+          enable: true
