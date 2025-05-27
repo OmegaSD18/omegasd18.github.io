@@ -11,6 +11,15 @@
     margin-inline-start:var(--gap)
 }
 
+.header{
+    background-color: var(--theme)
+}
+
+.main{
+    font-size: large;
+}
+
+
 .menu a {
     font-size:16px
 }

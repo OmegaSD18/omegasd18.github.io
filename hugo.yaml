@@ -30,7 +30,7 @@ languages:
           url: /posts/
           weight: 10
         - name: Gallery
-          url: /gallery/ 
+          url: /gallery
 
 params:
   profileMode:
@@ -39,8 +39,8 @@ params:
     subtitle: "Graduate Mathematics Student"
     imageUrl: "../assets/profile3.jpg" # optional
     imageTitle: "Soumya Dasgupta" # optional
-    imageWidth: 200 # custom size
-    imageHeight: 200 # custom size
+    imageWidth: 270 # custom size
+    imageHeight: 270 # custom size
     buttons:
       - name: About
         url: "/about"
@@ -50,13 +50,11 @@ params:
 
   socialIcons: # optional
     - name: "Instagram"
-      url: "<link>"
-    - name: "Github"
-      url: "<link>"
+      url: "https://www.instagram.com/omega_sd?igsh=MTJ6eXV0NHJiMWF5ZA=="
     - name: "LinkedIn"
-      url: "<link>"
-    - name: "X"
-      url: "<link>"
+      url: "https://www.linkedin.com/in/soumya-dasgupta-a32ab420b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+    - name: "email"
+      url: "mailto:soumya18vk@gmail.com"
 
   fuseOpts:
     isCaseSensitive: false

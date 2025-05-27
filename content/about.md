@@ -6,7 +6,7 @@ math: true
 
 ## Hi, Soumya here!
 
-I'm currently into my last year of Masters in Mathematics at Indian Statistical Institute, Kolkata. My interests are in Algebraic Topology and Differential Geometry, and I'm particularly interested in Equivariant Stable Homotopy Theory.  
+I'm currently doing Masters in Mathematics at Indian Statistical Institute, Kolkata. My interests are in Algebraic Topology and Differential Geometry, and I'm particularly interested in Equivariant Stable Homotopy Theory.  
 
 The motivation behind this blog was to share my thoughts on mathematics and my experiences. I should thank Bikram for helping me setting up the website, particularly helping me setting up $\LaTeX$ without which this website wouldn't have been fruitful. 
 
