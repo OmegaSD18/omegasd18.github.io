@@ -1,4 +1,4 @@
-baseURL: https://example.org/
+baseURL: https://omegasd18.github.io/
 languageCode: en-us
 title: Adams' Apple
 theme: PaperMod
@@ -68,7 +68,7 @@ params:
     # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 
-  ShowShareButtons: true
+  ShowShareButtons: false
   author: Soumya Dasgupta
 
   outputs:
