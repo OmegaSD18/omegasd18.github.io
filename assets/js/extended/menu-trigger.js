@@ -8,3 +8,9 @@ menuTrigger.addEventListener("click",function(){
 document.body.addEventListener('click', function(a) {
     menuTrigger.contains(a.target) || menu.classList.add("hidden");
 });
+
+const dropdownButton = document.querySelector('.dropdown-button');
+
+dropdownButton.addEventListener('click', () => {
+    dropdownButton.classList.toggle('active');
+});

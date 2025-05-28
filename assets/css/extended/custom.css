@@ -30,20 +30,46 @@
 }
 
 @media screen and (max-width:768px) {
-    .menu {
-     list-style:none;
-     position:absolute;
-     right:0;
-     z-index:5;
-     margin-bottom:var(--gap);
-     padding:var(--gap);
-     background:var(--code-bg);
-     border-radius:var(--radius);
-     border:2px solid var(--tertiary);
-     line-height:2.5;
-     margin:calc(var(--header-height) - var(--gap))var(--gap);
-     display:block
+    .bar {
+        width: 30px;
+        height: 3px;
+        border-radius: 30px;
+        background-color: var(--primary);
+        display: block;
+        margin: 5px 0;
+        transition: all 0.3s ease-in-out;
     }
+
+    .dropdown-button.active .bar:nth-child(1) {
+        transform: rotate(-45deg) translate(-6px, 6px);
+        height: 3px;
+        width: 30px;
+    }
+    .dropdown-button.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    .dropdown-button.active .bar:nth-child(3) {
+        transform: rotate(45deg) translate(-6px, -6px);
+        height: 3px;
+        width: 30px;
+    }
+
+    .menu {
+    list-style:none;
+    position: absolute;
+    right:0;
+    z-index:5;
+    opacity: 0.7;
+    margin-bottom:var(--gap);
+    padding:var(--gap);
+    background:var(--code-bg);
+    border-radius:var(--radius);
+    border:2px solid var(--tertiary);
+    line-height:2.5;
+    margin:calc(var(--header-height) - var(--gap))var(--gap);
+    display:block
+    }
+
     .list .menu {
      background:var(--entry)
     }
