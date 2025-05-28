@@ -1,6 +1,7 @@
 baseURL: https://omegasd18.github.io/
 languageCode: en-us
 title: Adams' Apple
+author: Soumya Dasgupta
 theme: PaperMod
 
 pagination:
@@ -23,11 +24,13 @@ languages:
         # - name: Search
         #   url: search/
         #   weight: 10
-        - name: Tags
-          url: tags/
-          weight: 10
+        - name: About
+          url: about/
         - name: Blog
           url: /posts/
+          weight: 10
+        - name: Tags
+          url: tags/
           weight: 10
         - name: Gallery
           url: /gallery
@@ -36,11 +39,11 @@ params:
   profileMode:
     enabled: true
     title: "Soumya Dasgupta" # optional default will be site title
-    subtitle: "Graduate Mathematics Student"
+    subtitle: "I'm currently doing Masters in Mathematics from Indian Statistical Institute, Kolkata. I'm interested in Algebraic Topology, particularly Equivariant Stable Homotopy Theory. Feel free to drop a message if you want to connect with me."
     imageUrl: "../assets/profile3.jpg" # optional
     imageTitle: "Soumya Dasgupta" # optional
-    imageWidth: 270 # custom size
-    imageHeight: 270 # custom size
+    imageWidth: 250 # custom size
+    imageHeight: 250 # custom size
     buttons:
       - name: About
         url: "/about"
