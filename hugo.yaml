@@ -39,7 +39,7 @@ params:
   profileMode:
     enabled: true
     title: "Soumya Dasgupta" # optional default will be site title
-    subtitle: "I'm currently doing Masters in Mathematics from Indian Statistical Institute, Kolkata. I'm interested in Algebraic Topology, particularly Equivariant Stable Homotopy Theory. Feel free to drop a message if you want to connect with me."
+    subtitle: "I'm currently doing Masters in Mathematics from Indian Statistical Institute, Kolkata. I'm interested in Algebraic Topology, particularly Equivariant Stable Homotopy Theory."
     imageUrl: "../assets/profile3.jpg" # optional
     imageTitle: "Soumya Dasgupta" # optional
     imageWidth: 250 # custom size

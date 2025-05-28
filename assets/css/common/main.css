@@ -11,11 +11,7 @@
 }
 
 .profile_inner span{
-    font-size: 20px;
-}
-
-.profile_inner img{
-    box-shadow: 0 4px 6px 0 var(--primary);
+    font-size: 18px;
 }
 
 .pagination {
@@ -96,53 +92,6 @@
 .social-icons li:nth-child(2) a::before{
     background: #0A66C2;
 }
-
-.about span{
-    display: flex;
-    font-size: 25px;
-}
-
-.about span div{
-    padding-left: 20px;
-    padding-right: 20px;
-    display: flex;
-}
-
-.about span div a .text{ 
-    font-size:  25px;
-    width: 100px;
-    border-color: #0A66C2;
-    border-radius: 50%;
-    justify-content: center;
-}
-
-.about span div .hide{
-    font-size: 18px;
-    padding-top: 5px;
-    color: transparent;
-    justify-content: center;
-}
-
-.about span div a:hover .hide{
-    color: var(--primary);
-    opacity: 0.6;
-    animation: reveal 1s;
-}
-
-@keyframes reveal{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 0.6;
-    }
-}
-
-/* .buttons a:hover{
-    opacity: 0.7;
-    background: black;
-    color: white;
-} */
 
 code {
     direction: ltr;
