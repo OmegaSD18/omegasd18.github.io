@@ -1,49 +1,13 @@
-<div class="profile">
-    {{- with site.Params.profileMode }}
-    <div class="profile_inner">
-        {{- if .imageUrl -}}
-        {{- $img := "" }}
-        {{- if not (urls.Parse .imageUrl).IsAbs }}
-            {{- $img = resources.Get .imageUrl }}
-        {{- end }}
-        {{- if $img }}
-            {{- $processableFormats := (slice "jpg" "jpeg" "png" "tif" "bmp" "gif") -}}
-            {{- if hugo.IsExtended -}}
-                {{- $processableFormats = $processableFormats | append "webp" -}}
-            {{- end -}}
-            {{- $prod := (hugo.IsProduction | or (eq site.Params.env "production")) }}
-            {{- if and (in $processableFormats $img.MediaType.SubType) (eq $prod true)}}
-                {{- if (not (and (not .imageHeight) (not .imageWidth))) }}
-                    {{- $img = $img.Resize (printf "%dx%d" .imageWidth .imageHeight) }}
-                {{- else if .imageHeight }}
-                    {{- $img = $img.Resize (printf "x%d" .imageHeight) }}
-                {{ else if .imageWidth }}
-                    {{- $img = $img.Resize (printf "%dx" .imageWidth) }}
-                {{ else }}
-                    {{- $img = $img.Resize "150x150" }}
-                {{- end }}
-            {{- end }}
-            <img draggable="false" src="{{ $img.Permalink }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-                height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- else }}
-        <img draggable="false" src="{{ .imageUrl | absURL }}" alt="{{ .imageTitle | default "profile image" }}" title="{{ .imageTitle }}"
-            height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
-        {{- end }}
-        {{- end }}
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
-        <span>{{ .subtitle | markdownify }}</span>
-        <div class="intro">
-            <div class="clip">
-                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                         width="100%" viewBox="0 0 1024 688" enable-background="new 0 0 1024 688" xml:space="preserve">
-                    <path fill=var(--primary) opacity="1.000000" stroke="none" 
+                    <path fill="#000000" opacity="1.000000" stroke="none" 
                         d="
                     M1025.000000,42.531342 
                         C1023.229248,38.383244 1024.102173,33.563381 1024.116699,28.854185 
                         C1024.137451,22.143877 1023.384155,15.399956 1024.789551,8.356912 
                         C1025.000000,19.354227 1025.000000,30.708456 1025.000000,42.531342 
                     z"/>
-                    <path fill=var(--primary) opacity="1.000000" stroke="none" 
+                    <path fill="#000000" opacity="1.000000" stroke="none" 
                         d="
                     M682.774597,405.921143 
                         C658.528381,418.252563 632.778687,424.916748 606.292847,430.904419 
@@ -421,7 +385,7 @@
                         C559.279236,112.855835 561.107178,113.109894 569.169067,107.511192 
                         C566.637451,106.078491 563.669739,106.575623 560.218201,105.510994 
                     z"/>
-                    <path fill=var(--primary) opacity="1.000000" stroke="none" 
+                    <path fill="#000000" opacity="1.000000" stroke="none" 
                         d="
                     M101.165619,492.201904 
                         C101.406151,493.224457 101.556870,493.871857 101.716919,494.516907 
@@ -436,34 +400,3 @@
                         C100.037407,488.544434 100.558739,490.185028 101.165619,492.201904 
                     z"/>
                 </svg>
-            </div>
-            <div class="text">
-                <div class="about"><a href="about">About</a></div>
-                <div class="posts"><a href="posts">Blog</a></div>
-            </div>
-        </div>
-        <span>Feel free drop a message if you want to connect with me.</span>
-        {{- partial "social_icons.html" -}}
-
-        {{/*  {{- with .buttons }}
-        <div class="buttons">
-            {{- range . }}
-            <a class="button" href="{{ trim .url " " }}" rel="noopener" title="{{ .name }}">
-                <span class="button-inner">
-                    {{ .name }}
-                    {{- if (findRE "://" .url) }}&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="14" width="14">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                    {{- end }}
-                </span>
-            </a>
-            {{- end }}
-        </div>
-        {{- end }}  */}}
-    </div>
-    {{- end}}
-</div>
