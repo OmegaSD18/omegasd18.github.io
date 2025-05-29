@@ -50,6 +50,11 @@ params:
       - name: Blog
         url: "/posts/"
     math: true
+    # assets:
+    #   favicon: "static/favicon.ico"
+    #   favicon16x16: "static/favicon-16x16.png"
+    #   favicon32x32: "static/favicon-32x32.png"
+    #   apple_touch_icon: "static/apple-touch-icon.png"
 
   socialIcons: # optional
     - name: "Instagram"
