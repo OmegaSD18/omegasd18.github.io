@@ -47,6 +47,7 @@ The motivation behind this blog was to share my thoughts on mathematics and my e
 
 ## Talks 
 
+- **Master's Project End-semestral Talk at ISI, Kolkata.** Equivariant Segal Infinite Loopspace Machine. ([note](https://drive.google.com/file/d/1C74rhPwIPgd-jCfgVRzrDNVPLv2dIQjY/view?usp=sharing))
 - **Master's Project Mid-semestral Talk at ISI, Kolkata.** $\Gamma$-spaces and Connections with Category of Spectra. ([notes](https://drive.google.com/file/d/1aG4YfCgEEJ1kDn3X_uoPS_k2VcKSO3U2/view?usp=drive_link))
 - **FRT Presentation at ANU, Canberra.** Equivariant Postnikov Tower and Homotopy Spectral Sequence. ([notes](https://drive.google.com/file/d/1j09fQMmfZtcDZMVLMeo5dOAi3zqZux_p/view?usp=sharing))
 - **Algebraic Topology Group at ISI, Kolkata.** James space as a model for $\Omega\Sigma X$. ([notes](https://drive.google.com/file/d/1JDR4h6mdI6mKKkq2nTkz1A2jjCK3MflW/view?usp=sharing))
