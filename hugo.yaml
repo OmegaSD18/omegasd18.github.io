@@ -18,28 +18,33 @@ languages:
       series: series
     menu:
       main:
-        - name: Archive
-          url: archives
-          weight: 5
         # - name: Search
         #   url: search/
         #   weight: 10
         - name: About
           url: about/
+          weight: 10
         - name: Blog
           url: /posts/
           weight: 10
-        - name: Tags
-          url: tags/
+        - name: Research
+          url: research/
+          weight: 10
+        - name: Teaching
+          url: teaching/
           weight: 10
         - name: Gallery
-          url: /gallery
+          url: gallery/
+          weight: 20
+        - name: Tags
+          url: tags/
+          weight: 20
 
 params:
   profileMode:
     enabled: true
     title: "Soumya Dasgupta" # optional default will be site title
-    subtitle: "I'm currently doing Masters in Mathematics from Indian Statistical Institute, Kolkata. I'm interested in Algebraic Topology, particularly Equivariant Stable Homotopy Theory."
+    subtitle: "I'm currently doing PhD in Mathematics from Indiana University, Bloomington. I'm interested in Algebraic Topology, particularly in Homotopy Theory and related areas."
     imageUrl: "../assets/profile3.jpg" # optional
     imageTitle: "Soumya Dasgupta" # optional
     imageWidth: 250 # custom size
