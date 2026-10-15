@@ -39,6 +39,9 @@ languages:
         - name: Tags
           url: tags/
           weight: 20
+        - name: Archives
+          url: archives/
+          weight: 20
 
 params:
   profileMode:
@@ -79,7 +82,7 @@ params:
     # limit: 10 # refer: https://www.fusejs.io/api/methods.html#search
     keys: ["title", "permalink", "summary", "content"]
 
-  ShowShareButtons: false
+  ShowShareButtons: true
   author: Soumya Dasgupta
 
   outputs:
