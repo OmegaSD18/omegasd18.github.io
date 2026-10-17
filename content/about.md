@@ -6,7 +6,9 @@ hideauthor: true
 hideshare: true
 ---
 
-Hey there! I'm Soumya, a first-year PhD student in Mathematics at Indiana University Bloomington. Before moving to Bloomington, I completed my Bachelor's and Master's in Mathematics from Indian Statistical Institute. I interested in Algebraic Topology, particularly in Homotopy Theory and the areas around it.
+### Hey there! 
+
+I'm Soumya ("Sou-moh"), a first-year PhD student in Mathematics at Indiana University Bloomington. Before moving to Bloomington, I completed my Bachelor's and Master's in Mathematics from Indian Statistical Institute. I'm interested in Algebraic Topology, particularly in Homotopy Theory and the areas around it.
 
 ### Why this blog?
 
@@ -19,6 +21,8 @@ A massive thanks to Bikram for helping me get this site off the ground. His help
 Also, big thanks to the [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme and [Google Gemini](https://gemini.google.com/) for helping me tweak the code and get everything looking just right.
 
 ## Gallery
+
+In a few more days.
 
 <!-- ## Projects
 
