@@ -4,6 +4,10 @@
   integrity="sha384-zh0CIslj+VczCZtlzBcjt5ppRcsAmDnRem7ESsYwWwg3m/OaJ2l4x7YBZl9Kxxib"
   crossorigin="anonymous"
 >
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
 <script
   defer
   src="https://cdn.jsdelivr.net/npm/katex@0.16.21/dist/katex.min.js"
@@ -29,5 +33,14 @@
     });
   });
 </script>
+
+{{ if .Params.hideshare }}
+<style>
+    /* Forcefully hides the share buttons and the text we added */
+    .share-buttons { 
+        display: none !important; 
+    }
+</style>
+{{ end }}
 
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">

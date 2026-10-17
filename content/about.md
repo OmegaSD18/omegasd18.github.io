@@ -1,20 +1,26 @@
 ---
-showTableOfContents: false
-date: 2025-05-26
+showTOC: false
 math: true
+TocOpen: true
+hideauthor: true
+hideshare: true
 ---
 
-## Hi, Soumya here!
+Hey there! I'm Soumya, a first-year PhD student in Mathematics at Indiana University Bloomington. Before moving to Bloomington, I completed my Bachelor's and Master's in Mathematics from Indian Statistical Institute. I interested in Algebraic Topology, particularly in Homotopy Theory and the areas around it.
 
-I'm currently in my first year of PhD in Mathematics at Indiana University, Bloomington. My interest in research in Algebraic Topology, particularly I'm interested in Homotopy Theory and related areas.
+### Why this blog?
 
-The motivation behind this blog was to share my thoughts on mathematics and my experiences. I should thank Bikram for helping me setting up the website, particularly helping me setting up $\LaTeX$ without which this website wouldn't have been fruitful. 
+I really just wanted a casual space to share my thoughts on math, write about the problems I find beautiful, and document my day-to-day experiences navigating grad school. 
 
-## Projects
+### Shoutouts
 
-<!-- |   |  Summer 2023  |
-| --- | --- |
-| Hope it goes well. | -->
+A massive thanks to Bikram for helping me get this site off the ground. His help with setting up $\LaTeX$ was an absolute lifesaver—without it, a math blog wouldn't have made much sense! And this was back when relying on AI to build a site was just a dream. 
+
+Also, big thanks to the [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme and [Google Gemini](https://gemini.google.com/) for helping me tweak the code and get everything looking just right.
+
+## Gallery
+
+<!-- ## Projects
 
 | **Master's Project at Indian Statistical Institute (ISI), Kolkata** |  2025 Fall |
 | ---------------------------------------- | -------------------------------------------------------------- |
@@ -61,11 +67,11 @@ The motivation behind this blog was to share my thoughts on mathematics and my e
 ## Activities 
 
 
-<!-- |  2021-Today  | **Math Club ISI** | 
+|  2021-Today  | **Math Club ISI** | 
 | --------------------------------------- | ----------------- |
 |                                         | It is a mathematics community organised and runned by the students of ISI, Bangalore. I have given the following two talks: | 
 |                                         | [What is Stable Homotopy?](https://www.youtube.com/watch?v=A8WCiOJpmTY&list=PL0l3kv-aP9d_FSw08irX60ucY-o_qiy-f&index=5) The talk focused on the motivation behind stable homotopy groups of a space, coming as a consequence of Fruendenthal's theorem. And it explored the connections between geometric problem of classifying manifolds upto cobordism and stable homotopy groups of Thom spectrum. |
-|                                         | [Metric Spaces and Isometry Groups.](https://www.youtube.com/watch?v=4rYRrKhr-cE&list=PL0l3kv-aP9d8A3IXvUUKvgFdxix3C9jAv&index=1) It was an introductory talk on metric spaces and concluded with classification of the isometry group of $\mathbb{R}^n$ under the $L^p$ norm. | -->
+|                                         | [Metric Spaces and Isometry Groups.](https://www.youtube.com/watch?v=4rYRrKhr-cE&list=PL0l3kv-aP9d8A3IXvUUKvgFdxix3C9jAv&index=1) It was an introductory talk on metric spaces and concluded with classification of the isometry group of $\mathbb{R}^n$ under the $L^p$ norm. |
 
 |  2025 Summer  |**Undergraduate Directed Group Reading Project (UDGRP)** |
 | ---------------------------------------- | ------------------------------------------------------- |
@@ -77,5 +83,5 @@ The motivation behind this blog was to share my thoughts on mathematics and my e
 
 |  2022 Winter  |**Winter Reading Project (WRP)** |
 | ---------------------------------------- | ------------------------------------------------------- |
-|                                          | I was mentor of the Topology and Topological Groups winter reading project. It was a group reading project particularly intended for the first and second year undergraduates. |
+|                                          | I was mentor of the Topology and Topological Groups winter reading project. It was a group reading project particularly intended for the first and second year undergraduates. | -->
 

@@ -1,0 +1,16 @@
+/* Apply Outfit across all text elements */
+body, h1, h2, h3, h4, h5, h6, button, input, select, textarea, .profile_inner h1, .toc .toc-header, .toc a {
+    font-family: 'Outfit', sans-serif !important;
+}
+
+/* Set a comfortable reading size and force a sturdy font weight */
+body {
+    font-size: 17px !important; 
+    font-weight: 400 !important; 
+    line-height: 1.7 !important; /* Adds a bit more breathing room between lines */
+}
+
+/* Ensure bold text actually looks bold */
+strong, b {
+    font-weight: 600 !important;
+}

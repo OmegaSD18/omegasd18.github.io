@@ -1,0 +1,74 @@
+/* Hide ToC entirely if the screen isn't wide enough */
+@media screen and (max-width: 1399px) {
+    .toc {
+        display: none !important;
+    }
+}
+
+/* Floating borderless ToC on wide screens */
+@media screen and (min-width: 1400px) {
+    /* Aggressively override PaperMod's default and dark mode boxes */
+    .toc, .dark .toc {
+        position: fixed !important;
+        left: calc(50% + 430px) !important; 
+        top: 100px !important;
+        width: 250px !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        padding: 0 !important;
+        max-height: calc(100vh - 150px);
+        overflow-y: auto;
+        z-index: 99;
+        font-size: 14px;
+    }
+
+    /* Uncollapsible Header styling */
+    .toc .toc-header {
+        margin-bottom: 12px;
+        font-weight: 600;
+        font-size: 16px;
+        color: var(--primary);
+    }
+
+    .toc li {
+        margin: 6px 0;
+        list-style-type: none;
+    }
+
+    /* Link styling */
+    .toc a {
+        color: var(--secondary);
+        text-decoration: none;
+        display: block;
+        padding: 4px 8px 4px 12px;
+        transition: color 0.2s ease-in-out;
+        border-left: 2px solid transparent;
+    }
+
+    .toc a:hover {
+        color: var(--primary);
+    }
+
+    /* Active section highlight */
+    .toc a.active {
+        color: var(--primary);
+        font-weight: 600;
+        border-left: 2px solid var(--primary);
+    }
+
+    /* Invisible scrollbar that only appears when hovering */
+    .toc::-webkit-scrollbar {
+        width: 4px;
+    }
+    .toc::-webkit-scrollbar-track {
+        background: transparent;
+    }
+    .toc::-webkit-scrollbar-thumb {
+        background-color: transparent;
+        border-radius: 10px;
+    }
+    .toc:hover::-webkit-scrollbar-thumb {
+        background-color: var(--border);
+    }
+}

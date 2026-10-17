@@ -1,0 +1,84 @@
+/* Strip all backgrounds, borders, and boxes from the main share button container */
+.share-buttons {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 14px !important;
+    /* Added padding to give the hover animation room to expand without getting clipped */
+    padding: 15px 5px !important; 
+    margin: 1.5rem 0 !important;
+    /* Ensure the container does not hide the bouncing buttons */
+    overflow: visible !important; 
+}
+
+/* Force the circular floating button design on the individual links */
+.share-buttons a {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    border-radius: 50% !important;
+    background-color: var(--entry) !important;
+    border: 1px solid var(--border) !important;
+    color: var(--secondary) !important;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) !important; 
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05) !important;
+}
+
+/* Fix the SVG icon sizing inside the buttons */
+.share-buttons a svg {
+    width: 20px !important;
+    height: 20px !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    transition: fill 0.3s ease !important;
+}
+
+/* Hover State: pop up and change color */
+.share-buttons a:hover {
+    background-color: var(--primary) !important;
+    border-color: var(--primary) !important;
+    transform: translateY(-5px) scale(1.1) !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1) !important;
+}
+
+/* Invert the SVG color on hover */
+.share-buttons a:hover svg {
+    fill: var(--theme) !important;
+    stroke: var(--theme) !important;
+}
+
+/* Dark Mode Shadows and Borders */
+.dark .share-buttons a {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3) !important;
+    border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+.dark .share-buttons a:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* Inject the text above the share buttons */
+/* Inject the text below the share buttons */
+.share-buttons::before {
+    content: "Help this reach others!" !important;
+    
+    /* Forces the text to break onto a completely new line in a flex layout */
+    flex-basis: 100% !important; 
+    display: block !important;
+    
+    /* Centers the text relative to the buttons */
+    text-align: center !important; 
+    
+    margin-top: 18px !important;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+    
+    /* Creates a faded and literally blurred text effect */
+    color: var(--secondary) !important; 
+    opacity: 0.5 !important; 
+    filter: blur(0.6px) !important; 
+}
