@@ -29,3 +29,6 @@ Moments that my eyes have witnessed and the camera has tried to capture!
 ### During ANU FRT 2024
 
 {{< masonry-gallery folder = "frt">}}
+
+
+{{< spotify >}}
