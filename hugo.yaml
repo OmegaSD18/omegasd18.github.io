@@ -33,9 +33,6 @@ languages:
         - name: Teaching
           url: teaching/
           weight: 10
-        - name: Tags
-          url: /tags/
-          weight: 20
         - name: Archives
           url: /archives/
           weight: 20
