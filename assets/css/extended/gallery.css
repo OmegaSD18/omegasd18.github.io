@@ -1,0 +1,58 @@
+/* --- The Masonry Grid Layout --- */
+.masonry-grid {
+    column-count: 3; /* 3 columns on desktop */
+    column-gap: 16px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Tablet breakpoint */
+@media (max-width: 1024px) {
+    .masonry-grid { column-count: 2; }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 768px) {
+    .masonry-grid { column-count: 1; }
+}
+/* --- The LQIP Image Containers (FIXED) --- */
+.lqip-wrapper {
+    display: grid !important; /* Forces the images to share the exact same footprint */
+    margin-bottom: 16px;
+    break-inside: avoid; 
+    border-radius: var(--radius);
+    overflow: hidden; 
+    background: transparent;
+}
+
+/* Base rules for both images */
+.lqip-tiny, .lqip-large {
+    grid-area: 1 / 1; /* Stacks them perfectly on top of each other */
+    width: 100%;
+    height: auto;     /* Lets the natural aspect ratio dictate the height */
+    display: block;
+    margin: 0;
+    padding: 0;
+}
+
+/* --- The Tiny Blurred Placeholder --- */
+.lqip-tiny {
+    filter: blur(3px);
+    transform: scale(1.05); /* Very slight scale to prevent white edges */
+    z-index: 1;
+}
+
+/* --- The High-Res Image Fade-In --- */
+.lqip-large {
+    object-fit: cover;
+    z-index: 2; /* Ensures it renders exactly on top of the blur */
+    
+    /* Starts invisible */
+    opacity: 0;
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* The shortcode adds this class the millisecond it downloads */
+.lqip-large.loaded {
+    opacity: 1;
+}

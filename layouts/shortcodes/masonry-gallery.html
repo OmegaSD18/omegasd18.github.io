@@ -1,0 +1,23 @@
+<div class="masonry-grid">
+  <!-- Check if a specific folder was requested -->
+  {{ $folder := .Get "folder" }}
+  {{ $images := slice }}
+  
+  {{ if $folder }}
+    <!-- Grab only images inside that specific folder -->
+    {{ $images = .Page.Resources.Match (printf "%s/*" $folder) }}
+  {{ else }}
+    <!-- Fallback: Grab all images if no folder is specified -->
+    {{ $images = .Page.Resources.ByType "image" }}
+  {{ end }}
+
+  {{ range $images }}
+    {{ $tiny := .Resize "40x webp q10" }}
+    {{ $large := .Resize "1000x webp q85" }}
+
+    <div class="lqip-wrapper">
+      <img class="lqip-tiny" src="{{ $tiny.RelPermalink }}" alt="{{ .Title }}" />
+      <img class="lqip-large" src="{{ $large.RelPermalink }}" alt="{{ .Title }}" loading="lazy" decoding="async" onload="this.classList.add('loaded')" />
+    </div>
+  {{ end }}
+</div>

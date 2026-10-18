@@ -1,0 +1,26 @@
+/* -----------------------------------------
+   High-Contrast Content Links (Theme Adaptive)
+----------------------------------------- */
+
+/* Light Mode: Vibrant Electric Indigo 
+   Provides sharp, bright contrast against white/light backgrounds */
+.post-content a {
+    box-shadow: 0 2px 0 #4F46E5 !important; 
+    transition: box-shadow 0.2s ease, color 0.2s ease !important;
+}
+
+.post-content a:hover {
+    box-shadow: 0 4px 0 #4F46E5 !important; 
+    color: #4F46E5 !important; /* Makes the text pop to match the line */
+}
+
+/* Dark Mode: Luminous Neon Cyan 
+   Provides glowing, high-visibility contrast against dark backgrounds */
+.dark .post-content a {
+    box-shadow: 0 2px 0 #00E5FF !important;
+}
+
+.dark .post-content a:hover {
+    box-shadow: 0 4px 0 #00E5FF !important;
+    color: #00E5FF !important;
+}

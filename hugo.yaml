@@ -22,7 +22,7 @@ languages:
         #   url: search/
         #   weight: 10
         - name: About
-          url: about/
+          url: /gallery/
           weight: 10
         - name: Blog
           url: /posts/
@@ -33,14 +33,11 @@ languages:
         - name: Teaching
           url: teaching/
           weight: 10
-        # - name: Gallery
-        #   url: gallery/
-        #   weight: 20
         - name: Tags
           url: /tags/
           weight: 20
         - name: Archives
-          url: archives/
+          url: /archives/
           weight: 20
         # - name: Search
         #   url: /search/
@@ -57,7 +54,7 @@ params:
     imageHeight: 250 # custom size
     buttons:
       - name: About
-        url: "/about"
+        url: "/gallery/"
       - name: Blog
         url: "/posts/"
     math: true

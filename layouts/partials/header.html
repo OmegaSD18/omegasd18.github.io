@@ -120,14 +120,13 @@
             </div>
         </div>
         {{- $currentPage := . }}
-        <button id="menu-trigger" aria-haspopup="menu" aria-label="Menu Button">    
-            <div class="dropdown-button">
-                <div class="bar"></div>
-                <div class="bar"></div>
-                <div class="bar"></div>
-            </div>
-        </button>
-        <ul class="menu hidden">
+        <!-- Native Animated Mobile Menu Button -->
+<button id="mobile-menu-btn" onclick="document.getElementById('menu').classList.toggle('open'); this.classList.toggle('active'); document.body.classList.toggle('menu-open');" aria-label="Toggle Menu">
+    <span></span>
+    <span></span>
+    <span></span>
+</button>
+        <ul id="menu">
             {{- range site.Menus.main }}
             {{- $menu_item_url := (cond (strings.HasSuffix .URL "/") .URL (printf "%s/" .URL) ) | absLangURL }}
             {{- $page_url:= $currentPage.Permalink | absLangURL }}

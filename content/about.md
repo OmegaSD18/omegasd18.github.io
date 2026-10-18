@@ -20,10 +20,6 @@ A massive thanks to Bikram for helping me get this site off the ground. His help
 
 Also, big thanks to the [Hugo PaperMod](https://github.com/adityatelange/hugo-PaperMod) theme and [Google Gemini](https://gemini.google.com/) for helping me tweak the code and get everything looking just right.
 
-## Gallery
-
-In a few more days.
-
 <!-- ## Projects
 
 | **Master's Project at Indian Statistical Institute (ISI), Kolkata** |  2025 Fall |

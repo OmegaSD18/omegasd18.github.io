@@ -1,42 +1,55 @@
-{{ $navMenu := resources.Get "js/extended/menu-trigger.js" | js.Build "menu-trigger.js" | minify | fingerprint }}
-<script language="javascript" type="text/javascript" src="{{ $navMenu.Permalink }}"></script>
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const menu = document.getElementById('menu');
+    const menuBtn = document.getElementById('mobile-menu-btn');
+    const header = document.querySelector('.header'); // Selects the header
+
+    let lastScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      
+      // --- Dynamic Header Shrink ---
+      if (scrollTop > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+      
+      // --- Mobile Menu Scroll-to-Close ---
+      if (menu && menuBtn && menu.classList.contains('open') && Math.abs(scrollTop - lastScrollTop) > 5) {
+        menu.classList.remove('open');
+        menuBtn.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; 
+    }, { passive: true });
+
+    // --- ToC Active Section Tracker ---
     const headers = Array.from(document.querySelectorAll('.post-content h1[id], .post-content h2[id], .post-content h3[id], .post-content h4[id]'));
     const tocLinks = document.querySelectorAll('.toc a');
 
-    if (headers.length === 0 || tocLinks.length === 0) return;
-
-    function updateActiveToc() {
-      let activeHeader = headers[0];
-
-      // Track the header closest to the top of the viewport
-      for (let i = 0; i < headers.length; i++) {
-        const rect = headers[i].getBoundingClientRect();
-        // The 120px threshold ensures it highlights exactly when the text clears the top edge
-        if (rect.top > 0 && rect.top < 120) {
-          activeHeader = headers[i];
-          break;
-        } else if (rect.top <= 0) {
-          activeHeader = headers[i];
+    if (headers.length > 0 && tocLinks.length > 0) {
+      function updateActiveToc() {
+        let activeHeader = headers[0];
+        for (let i = 0; i < headers.length; i++) {
+          const rect = headers[i].getBoundingClientRect();
+          if (rect.top > 0 && rect.top < 120) {
+            activeHeader = headers[i];
+            break;
+          } else if (rect.top <= 0) {
+            activeHeader = headers[i];
+          }
+        }
+        tocLinks.forEach(link => link.classList.remove('active'));
+        if (activeHeader) {
+          const id = activeHeader.getAttribute('id');
+          const activeLink = document.querySelector(`.toc a[href="#${id}"]`);
+          if (activeLink) activeLink.classList.add('active');
         }
       }
-
-      // Clear all active classes
-      tocLinks.forEach(link => link.classList.remove('active'));
-
-      // Apply the active class to the current section
-      if (activeHeader) {
-        const id = activeHeader.getAttribute('id');
-        const activeLink = document.querySelector(`.toc a[href="#${id}"]`);
-        if (activeLink) {
-          activeLink.classList.add('active');
-        }
-      }
+      window.addEventListener('scroll', updateActiveToc, { passive: true });
+      updateActiveToc();
     }
-
-    // Attach to scroll and run immediately on page load
-    window.addEventListener('scroll', updateActiveToc, { passive: true });
-    updateActiveToc();
   });
 </script>
