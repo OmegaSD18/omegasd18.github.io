@@ -1,7 +1,7 @@
-/* AUTHENTIC FLOATING CARD SPOTIFY WIDGET */
+/* MINIMALIST SPOTIFY PLAYER WITH FLOWING WAVE */
 .spotify-widget-wrapper {
     margin: 4rem auto;
-    max-width: 480px; /* Gives the wrapper enough room for the glow */
+    max-width: 480px;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     text-align: center;
 }
@@ -16,32 +16,26 @@
     opacity: 0.8;
 }
 
-/* THE CARD ITSELF */
+/* THE GLOWING CARD */
 .spotify-player {
     display: flex;
     background-color: #161616;
-    border-radius: 24px;
-    padding: 18px;
+    border-radius: 80px; /* Slightly tighter curve for the smaller height */
+    padding: 5px 10px !important; /* Reduced padding to make the card shorter */
     text-decoration: none;
-    
-    /* Bring card forward so shadow isn't clipped by other elements */
     position: relative;
     z-index: 10;
-    
-    /* Stronger, wider shadow: a deep black core with a wide, brightened halo */
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.9), 0 0 80px rgba(255, 255, 255, 0.08);
     border: 1px solid rgba(255, 255, 255, 0.08);
-    
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     align-items: center;
-    gap: 16px;
-    margin: 0 auto;
+    justify-content: space-between;
     max-width: 400px;
+    margin: 0 auto;
 }
 
 .spotify-player:hover {
     transform: translateY(-4px) scale(1.02);
-    /* Intensify the glow on hover */
     box-shadow: 0 24px 60px rgba(0, 0, 0, 0.95), 0 0 100px rgba(255, 255, 255, 0.12);
 }
 
@@ -49,135 +43,103 @@
     display: none !important;
 }
 
+/* 1. ALBUM COVER - ENFORCED ROTATING CD EFFECT */
 .player-cover {
-    width: 80px; /* Larger album art to match the image */
-    height: 80px;
-    border-radius: 16px;
-    object-fit: cover;
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4);
+    width: 46px !important;
+    height: 46px !important;
+    border-radius: 50% !important;
+    object-fit: cover !important;
+    display: block !important;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+    flex-shrink: 0;
+    
+    /* Adjusted transparent hole for the smaller size */
+    -webkit-mask-image: radial-gradient(circle at center, transparent 18%, black 19%);
+    mask-image: radial-gradient(circle at center, transparent 18%, black 19%);
+    
+    transform-origin: center center;
+    overflow: hidden;
+    animation: spin 6s linear infinite;
 }
 
+/* Optional: Pauses the spinning when you hover over the player */
+.spotify-player:hover .player-cover {
+    animation-play-state: paused;
+}
+
+/* The actual rotation keyframes */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 2. SONG INFO */
 .player-center {
     flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 0;
-}
-
-.player-info {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 12px;
+    margin: 0 16px;
     text-align: left;
+    min-width: 0; /* Allows text truncation */
 }
 
 .player-title {
     color: #fff;
-    font-size: 16px;
+    font-size: 14px; /* Reduced from 16px */
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     letter-spacing: 0.2px;
+    margin-bottom: 2px; /* Tighter spacing */
 }
 
 .player-artist {
     color: #a0a0a0;
-    font-size: 13px;
+    font-size: 12px; /* Reduced from 13px */
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 4px;
 }
 
-.player-controls {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 8px;
-}
-
-.ctrl-icon {
-    width: 14px;
-    height: 14px;
-    fill: #b3b3b3;
-}
-
-.play-pause-btn {
+/* 3. FLOWING WAVE */
+.player-right {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 8px;
+    flex-shrink: 0;
 }
 
-.play-pause-btn svg {
-    width: 16px;
-    height: 16px;
-    fill: #fff; /* White play button matching the image */
-}
-
-.player-progress {
-    width: 100%;
-    height: 4px;
-    background-color: #333;
-    border-radius: 2px;
-    overflow: hidden;
-}
-
-.progress-fill {
-    height: 100%;
-    background-color: #1DB954; /* Green progress bar */
-    width: 60%; /* Static visual width, or kept as animation */
-    border-radius: 2px;
-    animation: fake-progress 45s linear infinite;
-}
-
-.player-right {
+.now-playing-wave {
     display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
-    height: 80px; /* Matches new album art height */
-    padding-right: 4px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-}
-
-.spotify-icon {
-    width: 24px;
+    align-items: center;
     height: 24px;
-    fill: #1DB954;
-}
-
-/* EQ Animation */
-.now-playing-eq {
-    display: flex;
-    align-items: flex-end;
-    height: 16px;
     gap: 3px;
 }
 
-.now-playing-eq span {
+.now-playing-wave span {
     display: block;
     width: 4px;
-    background-color: #1DB954;
+    background-color: #1DB954; /* Spotify Green */
     border-radius: 2px;
-    animation: bounce 1.2s infinite ease-in-out;
+    animation: flowing-wave 1.2s ease-in-out infinite;
 }
 
-.now-playing-eq span:nth-child(2) { animation-delay: -0.9s; }
-.now-playing-eq span:nth-child(3) { animation-delay: -0.6s; }
+/* Stagger the animation delays to create a fluid wave effect */
+.now-playing-wave span:nth-child(1) { animation-delay: -1.2s; }
+.now-playing-wave span:nth-child(2) { animation-delay: -1.0s; }
+.now-playing-wave span:nth-child(3) { animation-delay: -0.8s; }
+.now-playing-wave span:nth-child(4) { animation-delay: -0.6s; }
+.now-playing-wave span:nth-child(5) { animation-delay: -0.4s; }
 
-@keyframes bounce {
+@keyframes flowing-wave {
     0%, 100% { height: 4px; }
-    50% { height: 16px; }
+    50% { height: 24px; }
 }
 
-@keyframes fake-progress {
-    0% { width: 10%; }
-    100% { width: 95%; }
-}
-
+/* OFFLINE STATUS */
 .spotify-offline {
     text-align: center;
     color: var(--secondary);
