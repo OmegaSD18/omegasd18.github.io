@@ -10,7 +10,7 @@ hideshare: true
 
 ### Hey there! 
 
-I'm Soumya ("Sou-moh"), a first-year PhD student in Mathematics at Indiana University Bloomington. Before moving to Bloomington, I completed my Bachelor's and Master's in Mathematics from Indian Statistical Institute. I'm interested in Algebraic Topology, particularly in Homotopy Theory and the areas around it.
+I'm Soumya (pronounced "Sou-moh"), a first-year PhD student in Mathematics at Indiana University Bloomington. Before moving to Bloomington, I completed my Bachelor's and Master's in Mathematics from Indian Statistical Institute. I'm interested in Algebraic Topology, particularly in Homotopy Theory and the areas around it.
 
 ### Why this blog?
 
@@ -29,6 +29,10 @@ Moments that my eyes have witnessed and the camera has tried to capture!
 ### During ANU FRT 2024
 
 {{< masonry-gallery folder = "frt">}}
+
+### Some sketches made by me
+
+{{< masonry-gallery folder = "sketches">}}
 
 
 {{< spotify >}}

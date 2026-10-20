@@ -22,7 +22,7 @@ languages:
         #   url: search/
         #   weight: 10
         - name: About
-          url: /gallery/
+          url: /about/
           weight: 10
         - name: Blog
           url: /posts/
@@ -51,7 +51,7 @@ params:
     imageHeight: 250 # custom size
     buttons:
       - name: About
-        url: "/gallery/"
+        url: "/about/"
       - name: Blog
         url: "/posts/"
     math: true
